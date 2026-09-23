@@ -3,14 +3,14 @@
 This repository contains my assignment submissions for DSCI 552 at the
 University of Southern California, taught by Professor Mohammad Reza Rajati.
 
-There are eight assignments in the course. At this stage, Assignment 1 has
-been completed, and the remaining assignments will be added as they are
+There are eight assignments in the course. At this stage, Assignments 1 and 2
+have been completed, and the remaining assignments will be added as they are
 completed.
 
 ## Assignments
 
 - [Assignment 1](assignment-01/): Completed
-- Assignment 2: Not started
+- [Assignment 2](assignment-02/): Completed
 - Assignment 3: Not started
 - Assignment 4: Not started
 - Assignment 5: Not started
@@ -38,3 +38,24 @@ The assignment covers:
 
 The complete Assignment 1 notebook and its data files are available in the
 [assignment-01](assignment-01/) directory.
+
+## Assignment 2: Combined Cycle Power Plant Data Set
+
+Assignment 2 studies the UCI Combined Cycle Power Plant Data Set as a
+regression problem. The task is to predict net hourly electrical energy output
+using ambient temperature, ambient pressure, relative humidity, and exhaust
+vacuum.
+
+The assignment covers:
+
+- Exploratory analysis using pairwise scatterplots and summary statistics
+- Simple and multiple linear regression
+- Outlier checks using studentized residuals
+- Comparisons of linear, nonlinear, and interaction models
+- A 70/30 train/test evaluation using mean squared error
+- KNN regression with raw and standardized predictors
+- Selection of the number of neighbors, $k$
+- Comparison of KNN regression with the best linear regression model
+
+The complete Assignment 2 notebook and its data files are available in the
+[assignment-02](assignment-02/) directory.
