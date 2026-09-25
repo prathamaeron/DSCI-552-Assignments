@@ -1,43 +1,94 @@
+<div align="center">
+
 # DSCI 552 Assignments
 
-This repository contains my coursework for DSCI 552 at the University of
-Southern California, taught by Professor Mohammad Reza Rajati.
+**Machine learning coursework | University of Southern California**
 
-## Progress
+[Assignments](#assignment-progress) · [Assignment 1](assignment-01/) · [Assignment 2](assignment-02/)
 
-| Assignment | Topic | Status |
-|---|---|---|
-| [Assignment 1](assignment-01/) | Vertebral Column classification with KNN | Completed |
-| [Assignment 2](assignment-02/) | Power Plant regression and ISLR exercises | Completed |
-| Assignment 3 | TBD | Not started |
-| Assignment 4 | TBD | Not started |
-| Assignment 5 | TBD | Not started |
-| Assignment 6 | TBD | Not started |
-| Assignment 7 | TBD | Not started |
-| Assignment 8 | TBD | Not started |
+</div>
 
-## Assignment 1: Vertebral Column
+This repository contains my coursework for DSCI 552, taught by Professor
+Mohammad Reza Rajati. The work focuses on exploratory data analysis,
+regression, classification, and nearest-neighbor methods.
 
-[Assignment 1](assignment-01/) uses the UCI Vertebral Column Data Set to
-classify patients as Normal or Abnormal from six biomechanical measurements.
-The notebook covers:
+## At A Glance
+
+| Completed | Current focus | Main methods |
+|:---:|---|---|
+| **2 / 8** | Supervised learning | KNN, linear regression, nonlinear models |
+
+## Assignment Progress
+
+| # | Assignment | Topic | Status |
+|:---:|---|---|:---:|
+| 01 | [Vertebral Column](assignment-01/) | KNN classification | **Complete** |
+| 02 | [Regression and ISLR](assignment-02/) | Power Plant regression and theory exercises | **Complete** |
+| 03 | Assignment 3 | To be added | Not started |
+| 04 | Assignment 4 | To be added | Not started |
+| 05 | Assignment 5 | To be added | Not started |
+| 06 | Assignment 6 | To be added | Not started |
+| 07 | Assignment 7 | To be added | Not started |
+| 08 | Assignment 8 | To be added | Not started |
+
+## Completed Work
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 01 · Vertebral Column
+
+[Open Assignment 1](assignment-01/)
+
+Classifies patients as Normal or Abnormal using six biomechanical
+measurements from the UCI Vertebral Column Data Set.
+
+**Covers**
 
 - Exploratory scatterplots and boxplots
 - A specified training/test split
-- Euclidean KNN classification and selection of $k$
-- Error rates, a confusion matrix, and classification metrics
-- Learning-curve analysis
-- Alternative and weighted distance metrics
+- Euclidean KNN and selection of $k$
+- Error rates, confusion matrix, and classification metrics
+- Learning curves and alternative distance metrics
+- Weighted KNN classification
 
-## Assignment 2: Regression and ISLR
+</td>
+<td width="50%" valign="top">
 
-[Assignment 2](assignment-02/) contains two notebook-based components:
+### 02 · Regression and ISLR
 
-- **Combined Cycle Power Plant:** Predicts net hourly electrical energy output
-	from ambient temperature, pressure, relative humidity, and exhaust vacuum.
-	The analysis compares linear, nonlinear, interaction, and KNN regression
-	models using train/test MSE. Standardized KNN with $k = 4$ achieved the best
-	reported test MSE of 14.3057.
-- **ISLR exercises:** Provides written solutions to ISLR 2.4.1, which applies
-	bias-variance reasoning to flexible methods, and ISLR 2.4.7, which applies
-	Euclidean distance and KNN classification.
+[Open Assignment 2](assignment-02/)
+
+Combines a Combined Cycle Power Plant regression study with written ISLR
+exercises on model flexibility and KNN.
+
+**CCPP analysis**
+
+- Simple, multiple, cubic, and interaction regression
+- Studentized-residual outlier checks
+- Train/test evaluation using MSE
+- KNN regression with raw and standardized features
+- Best reported model: standardized KNN, $k = 4$, test MSE **14.3057**
+
+**ISLR exercises**
+
+- Bias-variance reasoning for flexible methods
+- Euclidean distance and KNN classification
+
+</td>
+</tr>
+</table>
+
+## Repository Layout
+
+```text
+DSCI-552 Assignments/
+├── assignment-01/   Vertebral Column KNN classification
+├── assignment-02/   CCPP regression and ISLR exercises
+├── LICENSE
+└── README.md
+```
+
+Each assignment directory contains its own README, data, notebooks, and any
+available submission artifacts.
