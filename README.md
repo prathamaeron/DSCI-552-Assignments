@@ -2,7 +2,7 @@
 
 # DSCI 552 Assignments
 
-**Machine learning coursework | University of Southern California**
+**Machine Learning for Data Science | University of Southern California**
 
 [Assignments](#assignment-progress) · [Assignment 1](assignment-01/) · [Assignment 2](assignment-02/)
 
