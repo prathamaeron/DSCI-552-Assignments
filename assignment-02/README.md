@@ -1,11 +1,8 @@
 # DSCI 552 Homework 2
 
-## Combined Cycle Power Plant Data Set
-
-This assignment uses the UCI Combined Cycle Power Plant Data Set to predict
-net hourly electrical energy output using four ambient operating variables.
-The analysis focuses on exploratory data analysis, linear regression, and
-k-nearest neighbors (KNN) regression.
+Homework 2 contains a regression analysis of a Combined Cycle Power Plant
+dataset and selected exercises from *Introduction to Statistical Learning*
+(ISLR).
 
 ## Repository Structure
 
@@ -16,100 +13,70 @@ assignment-02/
 ├── data/
 │   ├── Folds5x2_pp.xlsx
 │   ├── Folds5x2_pp.ods
-│   └── Readme.txt
-└── notebooks/
-    └── Aggarwal_Pratham_HW2.ipynb
+│   ├── Readme.txt
+│   └── Readme.txt~
+├── notebooks/
+│   ├── Aggarwal_Pratham_HW2_CCPP.ipynb
+│   └── Aggarwal_Pratham_HW2_ISLR.ipynb
+└── submission/
 ```
 
-## Data
+## Part 1: Combined Cycle Power Plant
 
-The data contain 9,568 observations and five columns. Each row represents an
-hourly measurement collected from a Combined Cycle Power Plant over six years
-(2006-2011) at full load.
+`Aggarwal_Pratham_HW2_CCPP.ipynb` uses the UCI Combined Cycle Power Plant
+dataset. The data contain 9,568 hourly observations collected from 2006 to
+2011 while the plant operated at full load.
 
-The predictor variables are:
+The goal is to predict net hourly electrical energy output (`PE`) from:
 
-1. `AT` - Ambient Temperature
-2. `AP` - Ambient Pressure
-3. `RH` - Relative Humidity
-4. `V` - Exhaust Vacuum
-
-The response variable is:
-
-- `PE` - Net hourly electrical energy output
-
-The analysis uses the first sheet of `Folds5x2_pp.xlsx`.
-
-## Assignment Tasks Implemented
+- `AT`: Ambient Temperature
+- `AP`: Ambient Pressure
+- `RH`: Relative Humidity
+- `V`: Exhaust Vacuum
 
 The notebook includes:
 
-- Data loading and inspection
-- Pairwise scatterplots for all variables
-- Summary statistics, including means, medians, ranges, quartiles, and IQRs
-- Simple linear regression models for each predictor
-- Outlier checks using internally studentized residuals
-- Multiple linear regression using all four predictors
-- Comparison of simple and multiple regression coefficients
-- Cubic regression models to assess nonlinear associations
-- A full model with all pairwise interaction terms
-- A 70/30 train/test comparison of ordinary and expanded regression models
-- Backward elimination of insignificant quadratic and interaction terms
-- KNN regression using raw and standardized predictors
-- Selection of `k` from 1 through 100 using test MSE
-- Train/test error plots against `1/k`
-- Comparison of the best KNN model with the best linear regression model
+- Exploratory plots and summary statistics
+- Simple and multiple linear regression
+- Studentized-residual outlier checks
+- Cubic and interaction regression models
+- A 70/30 train/test comparison using mean squared error (MSE)
+- Backward elimination of quadratic and interaction terms
+- KNN regression with raw and standardized predictors
+- Selection of `k` from 1 through 100
 
-## Results
-
-All four predictors have statistically significant associations with `PE` in
-the simple regression models and in the multiple regression model at the 5%
-significance level. `AT` and `V` have the strongest negative relationships
-with `PE`, while `AP` has a positive coefficient and `RH` has a weaker
-negative relationship.
-
-Using the 70/30 train/test split, the regression-model results are:
+The best evaluated model was standardized KNN regression with `k = 4`:
 
 | Model | Train MSE | Test MSE |
 |---|---:|---:|
 | Multiple linear regression | 20.5808 | 21.2399 |
 | Selected quadratic/interactions regression | 17.8908 | 18.6600 |
+| KNN, raw features, `k = 5` | 10.6008 | 15.7268 |
+| KNN, standardized features, `k = 4` | 8.5914 | 14.3057 |
 
-For KNN regression, the best results are:
+## Part 2: ISLR Exercises
 
-| Feature representation | Best `k` | Train MSE | Test MSE |
-|---|---:|---:|---:|
-| Raw features | 5 | 10.6008 | 15.7268 |
-| Standardized features | 4 | 8.5914 | 14.3057 |
+`Aggarwal_Pratham_HW2_ISLR.ipynb` contains written solutions to:
 
-The best overall model is KNN with standardized features and `k = 4`. Its
-test MSE is approximately 23.3% lower than the selected
-quadratic/interactions regression model. This suggests that KNN captures
-local nonlinear patterns that are not fully represented by the parametric
-regression models.
+- **ISLR 2.4.1:** Comparing flexible and inflexible statistical learning
+    methods using bias-variance reasoning.
+- **ISLR 2.4.7:** Computing Euclidean distances and KNN predictions for a
+    three-predictor classification example.
 
-## Observations
+For ISLR 2.4.7, the nearest observation to $(0,0,0)$ is Green, so the $K=1$
+prediction is Green. The three-neighbor majority vote is Red. A highly
+nonlinear Bayes decision boundary favors a small value of $K$ because it
+requires a more flexible local decision rule.
 
-The scatterplots show a strong negative relationship between `PE` and both
-`AT` and `V`. The relationship with `RH` is weaker and negative, while the
-relationship with `AP` is positive. The predictors also have relationships
-with one another, which helps explain why simple and multiple regression
-coefficients differ in magnitude.
+## Running the Notebooks
 
-The expanded regression model improves on ordinary multiple regression, but
-standardized KNN has the lowest test error among the evaluated models. The
-training MSE is lower than the test MSE for each model, as expected. Test MSE
-is therefore used as the primary metric for comparing generalization
-performance.
+1. Open either notebook in Jupyter or VS Code.
+2. Select a Python 3 kernel with the required packages installed.
+3. Run the code cells from top to bottom.
 
-## Running the Notebook
-
-1. Open `notebooks/Aggarwal_Pratham_HW2.ipynb` in Jupyter or VS Code.
-2. Select a local Python kernel with the required packages installed.
-3. Run the cells from top to bottom.
-
-The notebook expects to be run from the `notebooks` directory so that the path
-`../data/Folds5x2_pp.xlsx` resolves correctly.
+The CCPP notebook reads `../data/Folds5x2_pp.xlsx` relative to the
+`notebooks` directory. The ISLR notebook is markdown-based and does not
+require a dataset or kernel to view its solutions.
 
 ## Dependencies
 
