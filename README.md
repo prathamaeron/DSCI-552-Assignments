@@ -2,9 +2,10 @@
 
 # DSCI 552 Assignments
 
-**Machine Learning for Data Science | University of Southern California**
+**Machine Learning for Data Science**  
+University of Southern California
 
-[Assignments](#assignment-progress) · [Assignment 1](assignment-01/) · [Assignment 2](assignment-02/)
+[Progress](#assignment-progress) · [Completed Work](#completed-work) · [Repository Layout](#repository-layout)
 
 </div>
 
