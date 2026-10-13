@@ -17,7 +17,7 @@ regression, classification, and nearest-neighbor methods.
 
 | Completed | Current focus | Main methods |
 |:---:|---|---|
-| **2 / 8** | Supervised learning | KNN, linear regression, nonlinear models |
+| **3 / 8** | Time-series analysis | Regression, KNN, time-domain features, bootstrap inference |
 
 ## Assignment Progress
 
@@ -25,7 +25,7 @@ regression, classification, and nearest-neighbor methods.
 |:---:|---|---|:---:|
 | 01 | [Vertebral Column](assignment-01/) | KNN classification | **Complete** |
 | 02 | [Regression and ISLR](assignment-02/) | Power Plant regression and theory exercises | **Complete** |
-| 03 | Assignment 3 | To be added | Not started |
+| 03 | [Time Series Classification and ISLR](assignment-03/) | AReM feature extraction and regression theory | **Complete** |
 | 04 | Assignment 4 | To be added | Not started |
 | 05 | Assignment 5 | To be added | Not started |
 | 06 | Assignment 6 | To be added | Not started |
@@ -79,6 +79,26 @@ exercises on model flexibility and KNN.
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top">
+
+### 03 · Time Series Classification and ISLR
+
+[Open Assignment 3](assignment-03/)
+
+Extracts time-domain features from the AReM activity-recognition data and
+answers ISLR 3.7.4 on linear versus cubic regression.
+
+**Covers**
+
+- The specified 69/19 training/test split across 88 activity instances
+- Seven summary statistics for each of six sensor series
+- Bootstrap 90% confidence intervals for feature standard deviations
+- Training-only ANOVA ranking of the three most discriminative features
+- Training and test RSS comparisons for linear and cubic regression
+
+</td>
+</tr>
 </table>
 
 ## Repository Layout
@@ -87,6 +107,7 @@ exercises on model flexibility and KNN.
 DSCI-552 Assignments/
 ├── assignment-01/   Vertebral Column KNN classification
 ├── assignment-02/   CCPP regression and ISLR exercises
+├── assignment-03/   AReM time-series features and ISLR regression exercise
 ├── LICENSE
 └── README.md
 ```
