@@ -10,13 +10,17 @@ Normal or Abnormal using k-nearest neighbors (KNN).
 ```text
 assignment-01/
 ├── README.md
+├── Homework1.pdf
 ├── data/
 │   ├── column_2C.dat
 │   ├── column_2C_weka.arff
 │   ├── column_3C.dat
 │   └── column_3C_weka.arff
-└── notebooks/
-    └── Aggarwal_Pratham_HW1.ipynb
+├── notebooks/
+│   └── Aggarwal_Pratham_HW1.ipynb
+└── submission/
+    ├── Aggarwal_Pratham_HW1.html
+    └── Aggarwal_Pratham_HW1.pdf
 ```
 
 ## Data

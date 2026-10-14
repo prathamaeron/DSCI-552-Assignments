@@ -13,12 +13,10 @@ assignment-02/
 ├── data/
 │   ├── Folds5x2_pp.xlsx
 │   ├── Folds5x2_pp.ods
-│   ├── Readme.txt
-│   └── Readme.txt~
+│   └── Readme.txt
 ├── notebooks/
 │   ├── Aggarwal_Pratham_HW2_CCPP.ipynb
 │   └── Aggarwal_Pratham_HW2_ISLR.ipynb
-└── submission/
 ```
 
 ## Part 1: Combined Cycle Power Plant
@@ -87,3 +85,4 @@ require a dataset or kernel to view its solutions.
 - Seaborn
 - scikit-learn
 - statsmodels
+- openpyxl
