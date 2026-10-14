@@ -101,15 +101,30 @@ answers ISLR 3.7.4 on linear versus cubic regression.
 </tr>
 </table>
 
+## Setup
+
+Create and activate a virtual environment, then install the dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Run each notebook from its assignment's `notebooks/` directory so relative
+data paths resolve correctly.
+
 ## Repository Layout
 
 ```text
 DSCI-552 Assignments/
+├── .gitignore
 ├── assignment-01/   Vertebral Column KNN classification
 ├── assignment-02/   CCPP regression and ISLR exercises
 ├── assignment-03/   AReM time-series features and ISLR regression exercise
 ├── LICENSE
-└── README.md
+├── README.md
+└── requirements.txt
 ```
 
 Each assignment directory contains its own README, data, notebooks, and any
