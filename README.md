@@ -17,7 +17,7 @@ regression, classification, and nearest-neighbor methods.
 
 | Completed | Current focus | Main methods |
 |:---:|---|---|
-| **3 / 8** | Time-series analysis | Regression, KNN, time-domain features, bootstrap inference |
+| **4 / 8** | Time-series classification | Regression, KNN, logistic regression, Naive Bayes, time-domain features |
 
 ## Assignment Progress
 
@@ -26,7 +26,7 @@ regression, classification, and nearest-neighbor methods.
 | 01 | [Vertebral Column](assignment-01/) | KNN classification | **Complete** |
 | 02 | [Regression and ISLR](assignment-02/) | Power Plant regression and theory exercises | **Complete** |
 | 03 | [Time Series Classification and ISLR](assignment-03/) | AReM feature extraction and regression theory | **Complete** |
-| 04 | Assignment 4 | To be added | Not started |
+| 04 | [Time Series Classification Part 2 and ISLR](assignment-04/) | AReM binary/multiclass classification and ISLR theory | **Complete** |
 | 05 | Assignment 5 | To be added | Not started |
 | 06 | Assignment 6 | To be added | Not started |
 | 07 | Assignment 7 | To be added | Not started |
@@ -99,6 +99,32 @@ answers ISLR 3.7.4 on linear versus cubic regression.
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top">
+
+### 04 · Time Series Classification Part 2 and ISLR
+
+[Open Assignment 4](assignment-04/)
+
+Continues the AReM activity-recognition analysis with binary and multiclass
+classification, and answers ISLR exercises 4.8.3 and 4.8.7.
+
+**AReM classification**
+
+- Reuses the HW3 feature extraction and the prescribed 69/19 train/test split
+- Compares full-series and two-half time-domain feature plots
+- Tunes unpenalized logistic regression with five-fold stratified CV and RFE
+- Evaluates L1-penalized logistic regression and handles binary class imbalance
+- Compares L1 multinomial logistic regression with Gaussian and Multinomial
+  Naive Bayes; reports confusion matrices, ROC curves, and AUC
+
+**ISLR exercises**
+
+- Derives the quadratic Bayes decision boundary for QDA
+- Computes a posterior dividend probability using Bayes' theorem
+
+</td>
+</tr>
 </table>
 
 ## Setup
@@ -122,6 +148,7 @@ DSCI-552 Assignments/
 ├── assignment-01/   Vertebral Column KNN classification
 ├── assignment-02/   CCPP regression and ISLR exercises
 ├── assignment-03/   AReM time-series features and ISLR regression exercise
+├── assignment-04/   AReM classification and ISLR exercises
 ├── LICENSE
 ├── README.md
 └── requirements.txt
