@@ -1,10 +1,10 @@
 # DSCI 552 Homework 2
 
-Homework 2 contains a regression analysis of a Combined Cycle Power Plant
-dataset and selected exercises from *Introduction to Statistical Learning*
-(ISLR).
+Homework 2 combines a regression analysis of the Combined Cycle Power Plant
+(CCPP) data with written exercises from *An Introduction to Statistical
+Learning* (ISLR).
 
-## Repository Structure
+## Contents
 
 ```text
 assignment-02/
@@ -14,75 +14,58 @@ assignment-02/
 │   ├── Folds5x2_pp.xlsx
 │   ├── Folds5x2_pp.ods
 │   └── Readme.txt
-├── notebooks/
-│   ├── Aggarwal_Pratham_HW2_CCPP.ipynb
-│   └── Aggarwal_Pratham_HW2_ISLR.ipynb
+└── notebooks/
+    ├── Aggarwal_Pratham_HW2_CCPP.ipynb
+    └── Aggarwal_Pratham_HW2_ISLR.ipynb
 ```
 
 ## Part 1: Combined Cycle Power Plant
 
-`Aggarwal_Pratham_HW2_CCPP.ipynb` uses the UCI Combined Cycle Power Plant
-dataset. The data contain 9,568 hourly observations collected from 2006 to
-2011 while the plant operated at full load.
+`Aggarwal_Pratham_HW2_CCPP.ipynb` uses 9,568 hourly observations collected
+from 2006 to 2011 while the plant operated at full load. It predicts net
+hourly electrical energy output (`PE`) from ambient temperature (`AT`),
+ambient pressure (`AP`), relative humidity (`RH`), and exhaust vacuum (`V`).
 
-The goal is to predict net hourly electrical energy output (`PE`) from:
+The notebook covers exploratory plots and summary statistics, simple and
+multiple linear regression, studentized-residual outlier checks, cubic and
+interaction models, backward elimination of quadratic/interaction terms, and
+KNN regression with raw and standardized predictors. Models are compared
+using a 70/30 train/test split and mean squared error (MSE); KNN uses candidate
+values of \(k\) from 1 through 100.
 
-- `AT`: Ambient Temperature
-- `AP`: Ambient Pressure
-- `RH`: Relative Humidity
-- `V`: Exhaust Vacuum
+### Results
 
-The notebook includes:
-
-- Exploratory plots and summary statistics
-- Simple and multiple linear regression
-- Studentized-residual outlier checks
-- Cubic and interaction regression models
-- A 70/30 train/test comparison using mean squared error (MSE)
-- Backward elimination of quadratic and interaction terms
-- KNN regression with raw and standardized predictors
-- Selection of `k` from 1 through 100
-
-The best evaluated model was standardized KNN regression with `k = 4`:
+The best evaluated model was standardized KNN regression with \(k=4\):
 
 | Model | Train MSE | Test MSE |
 |---|---:|---:|
 | Multiple linear regression | 20.5808 | 21.2399 |
-| Selected quadratic/interactions regression | 17.8908 | 18.6600 |
-| KNN, raw features, `k = 5` | 10.6008 | 15.7268 |
-| KNN, standardized features, `k = 4` | 8.5914 | 14.3057 |
+| Selected quadratic/interaction regression | 17.8908 | 18.6600 |
+| KNN, raw features (\(k=5\)) | 10.6008 | 15.7268 |
+| KNN, standardized features (\(k=4\)) | 8.5914 | 14.3057 |
 
 ## Part 2: ISLR Exercises
 
 `Aggarwal_Pratham_HW2_ISLR.ipynb` contains written solutions to:
 
-- **ISLR 2.4.1:** Comparing flexible and inflexible statistical learning
-    methods using bias-variance reasoning.
-- **ISLR 2.4.7:** Computing Euclidean distances and KNN predictions for a
-    three-predictor classification example.
-
-For ISLR 2.4.7, the nearest observation to $(0,0,0)$ is Green, so the $K=1$
-prediction is Green. The three-neighbor majority vote is Red. A highly
-nonlinear Bayes decision boundary favors a small value of $K$ because it
-requires a more flexible local decision rule.
+- **2.4.1:** How the relative sample size, number of predictors,
+  nonlinearity, and irreducible error affect the benefit of a flexible
+  method.
+- **2.4.7:** Euclidean distances and KNN predictions for a
+  three-predictor classification example. The nearest neighbor predicts
+  Green, the three-neighbor majority predicts Red, and a highly nonlinear
+  Bayes decision boundary favors a smaller \(K\).
 
 ## Running the Notebooks
 
-1. Open either notebook in Jupyter or VS Code.
-2. Select a Python 3 kernel with the required packages installed.
-3. Run the code cells from top to bottom.
+Open either notebook in Jupyter or VS Code and select a Python kernel with
+the repository dependencies installed. Run the CCPP notebook with its working
+directory set to `assignment-02/notebooks/`, so
+`../data/Folds5x2_pp.xlsx` resolves. The ISLR notebook is markdown-based and
+does not require execution.
 
-The CCPP notebook reads `../data/Folds5x2_pp.xlsx` relative to the
-`notebooks` directory. The ISLR notebook is markdown-based and does not
-require a dataset or kernel to view its solutions.
+Install shared dependencies from the repository root using:
 
-## Dependencies
-
-- Python 3
-- NumPy
-- pandas
-- Matplotlib
-- Seaborn
-- scikit-learn
-- statsmodels
-- openpyxl
+```bash
+python -m pip install -r requirements.txt
+```
