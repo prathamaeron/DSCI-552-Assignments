@@ -22,7 +22,7 @@ theory.
 | 02 | [Regression and ISLR](assignment-02/) | Power Plant regression and ISLR 2.4.1, 2.4.7 | Complete |
 | 03 | [Time-Series Features and ISLR](assignment-03/) | AReM feature extraction and ISLR 3.7.4 | Complete |
 | 04 | [Time-Series Classification and ISLR](assignment-04/) | AReM binary/multiclass models and ISLR 4.8.3, 4.8.7 | Complete |
-| 05 | Assignment 5 | Not added yet | Not started |
+| 05 | [LASSO and Decision Trees](assignment-05/) | Communities/crime regression and acute-inflammations decision trees | Complete |
 | 06 | Assignment 6 | Not added yet | Not started |
 | 07 | Assignment 7 | Not added yet | Not started |
 | 08 | Assignment 8 | Not added yet | Not started |
@@ -62,6 +62,15 @@ data. The companion ISLR notebook answers exercise 3.7.4.
 Continues the AReM analysis with binary and multiclass logistic regression,
 feature selection, class-imbalance handling, and Gaussian and Multinomial
 Naive Bayes. The companion ISLR notebook answers exercises 4.8.3 and 4.8.7.
+
+### 05 · LASSO and Decision Trees
+
+[Assignment 5 details](assignment-05/)
+
+Combines two supervised-learning tasks: regularized regression on the
+Communities and Crime dataset, and an interpretable decision-tree analysis of
+acute inflammations. The notebook set compares OLS, ridge, LASSO, principal
+components regression, XGBoost, and pruned decision trees.
 
 ## Setup
 
@@ -106,6 +115,11 @@ DSCI-552-Assignments/
 │   └── README.md
 ├── assignment-04/
 │   ├── Homework4.pdf
+│   ├── data/
+│   ├── notebooks/
+│   └── README.md
+├── assignment-05/
+│   ├── Homework5.pdf
 │   ├── data/
 │   ├── notebooks/
 │   └── README.md
